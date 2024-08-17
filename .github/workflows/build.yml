@@ -37,6 +37,7 @@ jobs:
         repository: 'aseprite/aseprite'
         submodules: 'recursive'
         ref: ${{ github.event.inputs.tag_name }}
+        node-version: '20'  # Add this line to specify Node.js version 20
 
     - uses: seanmiddleditch/gha-setup-ninja@master
     - uses: ilammy/msvc-dev-cmd@v1
@@ -105,3 +106,4 @@ jobs:
         prerelease: false
         files: |
           D:/a/aseprite.${{ github.event.inputs.tag_name }}.zip
+        node-version: '20'  # Add this line to specify Node.js version 20
